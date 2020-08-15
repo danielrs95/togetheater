@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+}
+
+html, body, #root, .container{
+  height: 100%;
+  background-color: white ;
+}
+
+/***** Dashboard component *****/
+  .dashboardTitle{
+    color: #588da8;
+    border-bottom: 1px solid #383e56;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 10px 10px;
+    padding: 0 0 0 2px;
+  }
+
+/***** topRated component *****/
+  .container-fluid{
+    position: relative;
+    padding: 0 0 0 0;
+    /*margin: 5% 0 0 0;*/
+  }
+  /* Poster image */
+  .posterImage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  /* Container para la informacion del poster */
+  .posterInfo {
+    position: absolute;
+    transition: 1s ease;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:0%;
+    overflow: hidden;
+  }
+  .posterTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Icono para agregar al wishlist */
+  .addWishlist {
+    margin-bottom: .5rem;
+  }
+  .addWishlist span i {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /* Al hacer hover cambiar el color del fondo del container */
+  .posterContainer:hover  {  
+    background: rgb(0,0,0,0.8);
+  }
+  /* Al hacer hover cambiar la opacidad de la imagen */
+  .poster:hover .posterImage {
+    opacity: .1;
+  }
+  /* mostramos el div posterInfo cuando se hace hoover */
+  .posterContainer:hover .posterInfo {
+    opacity: 1;
+    height:100%;
+  }
+  .posterText {
+    /*background-color: #4CAF50;*/
+    color: white;
+    font-size: 13px;
+    padding: 30px 20px 20px 20px;
+  }
+  .slide {
+    padding: 0% 10%;
+  }
+
+  /***** Cambiar responsive de bootstrap *****/
+    @media (min-width: 576px){
+      .col-sm-6 {
+      max-width:49%;
+      margin: 10px 0 0 0;
+      margin-left:auto;
+      margin-right:auto;
+      flex: 0 0 49%;
+      }
+    }
+
+    @media (min-width: 768px){
+      .col-md-4 {
+        flex: 0 0 32%;
+        max-width: 32%;
+        margin:  10px 0 0 0;
+        margin-left:auto;
+        margin-right:auto;
+      }
+    }
+
+    @media (min-width: 992px){
+      .col-lg-3 {
+        flex: 0 0 24%;
+        max-width: 24%;
+        margin:  10px 0 0 0;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      .col-lg-2 {
+        flex: 0 0 16%;
+        max-width: 16%;
+        margin:  10px 0 0 0;
+        margin-left:auto;
+        margin-right:auto;
+      }
+    }
+
+/***** Navbar component *****/
+  /* Navbar icon (titulo moviesApp) */
+  .navbar-light .navbar-brand{
+    color:  #588da8;
+    font-weight: bold;
+  }
+  /* Navbar borde inferior y color de fondo*/
+  .color-nav{
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    background-color: white; 
+  }
+  /* Boton para hacer logout */
+  .btn-danger {
+    background-color: #cf1b1b;
+  }
+
+/***** Form form *****/
+  .card-form{
+    margin: auto;
+    width: 100%;
+    background-color: white  ; 
+  }
+  .card-header h3{
+    color: #073642;
+  }
+  .card-body button{
+    background-color: #073642;
+    border-color: #073642;
+  }
+  /* Cambiar el color de todos los iconos de FontAwesome */
+  .fas{
+    font-size: 20px;
+    color: #b58900 ;
+  }
+
+
+
+
+
+
+
+
+
+
