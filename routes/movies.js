@@ -56,7 +56,7 @@ module.exports = router
 // })
 
 
-// Actualizar movie 
+// Actualizar movie
 // router.put('/update/:id', async(req, res, next)=>{
 // 	const movie = await Movie.findById(req.params.id)
 // 	movie.title = req.body.title
