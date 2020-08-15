@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-const uri = process.env.ATLAS_URI;
+// const uri = process.env.ATLAS_URI;
 mongoose.connect('mongodb+srv://movies123:movies123@cluster0.hljsi.mongodb.net/data?retryWrites=true&w=majority' || "mongodb://localhost:27017/movies", { useNewUrlParser:true, useUnifiedTopology: true,useCreateIndex: true}), (err)=>{
   if(err) throw err;
   console.log("MongoDB connection established")
