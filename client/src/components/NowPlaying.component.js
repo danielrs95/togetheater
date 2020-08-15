@@ -25,7 +25,7 @@ export default function Trending () {
 
 	const addMovie = async(data) => {
 		let token=localStorage.getItem('jwt')
-		const ServerCall = await axios.post("http://localhost:5000/api/movies/add", {
+		const ServerCall = await axios.post("/api/movies/add", {
 			api_movie_id: data.id,
 			title: data.title,
 			user: context.stateUser.user.userId
