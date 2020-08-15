@@ -15,7 +15,7 @@ export default function Dashboard(){
 
 		const fetchData = () => {
 			axios.all([
-				axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`),
+				axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=0b3beec048d12ef87f3902096ef4107b`),
 				axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}`),
 				axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}`),
 				axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}`),
