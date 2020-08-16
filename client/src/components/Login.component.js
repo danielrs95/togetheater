@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 toast.configure()
 
 // https://bluuweb.github.io/react/formularios/#state
-
 export default function Login(props){
 	const context = useContext(AuthGlobal);
   const [email, setEmail] = useState("");
@@ -49,7 +48,6 @@ export default function Login(props){
     e.preventDefault();
   };
 
-
   if (!showChild){
   	return null;
   } else {
@@ -66,25 +64,25 @@ export default function Login(props){
 
 	  				<div className="card-body">
 	  					<Form onSubmit={handleSubmit}>
-	  					  <Form.Group 
-	  					  className="d-flex" 
+	  					  <Form.Group
+	  					  className="d-flex"
 	  					  controlId="formBasicEmail">
-	  					    <span 
+	  					    <span
 	  					    className="input-group-text"><i className="fas fa-user"></i></span>
-	  					    <Form.Control 
+	  					    <Form.Control
 	  					    	className="d-inline"
-	  						    type="email" 
-	  						    placeholder="Email" 
+	  						    type="email"
+	  						    placeholder="Email"
 	  						    name="email"
 	  						    onChange={e=> setEmail(e.target.value)}/>
 	  					  </Form.Group>
 
 	  					  <Form.Group className="d-flex" controlId="formBasicPassword">
 	  					  	<span className="input-group-text"><i className="fas fa-key"></i></span>
-	  					    <Form.Control 
+	  					    <Form.Control
 	  					    	className="d-inline"
-	  					    	type="password" 
-	  					    	placeholder="Password" 
+	  					    	type="password"
+	  					    	placeholder="Password"
 	  					    	name="password"
 	  					    	onChange={e=> setPassword(e.target.value)}/>
 	  					  </Form.Group>

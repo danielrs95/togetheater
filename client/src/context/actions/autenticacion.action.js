@@ -5,7 +5,8 @@ export const loginUser = (user,dispatch,seterror) =>{
   fetch("/api/users/login", {
     method: "POST",
     body: JSON.stringify(user),
-    headers: {
+    headers:
+    {
       Accept: "application/json",
       "Content-Type": "application/json"
     }
@@ -27,7 +28,6 @@ export const loginUser = (user,dispatch,seterror) =>{
     console.log("error")
     logoutUser(dispatch);
   });
-    console.log("hola")
 };
 
 export const setCurrentUser = decoded => {//si se loguea , setear datos del usuario

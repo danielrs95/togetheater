@@ -12,7 +12,6 @@ export default function Dashboard(){
 	const [upcoming, setUpcoming] = useState([])
 
 	useEffect(()=>{
-
 		const fetchData = () => {
 			axios.all([
 				axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`),
