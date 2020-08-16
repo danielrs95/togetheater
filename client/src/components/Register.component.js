@@ -29,42 +29,38 @@ export default function Register(){
 	const sentData = async(e) =>{
 		e.preventDefault()
 
-		const ServerCall = await axios.post("/api/users/register", data)
-		// Para mostrar la data que responde el servidor
+		const ServerCall = await axios
+			.post("/api/users/register", data)
+			.then(function(response){
+				return response.data
+			})
+			.catch(function(error){
+				console.log(error.response)
+			})
 		// console.log(ServerCall)
-		history.push("/login")
-
-		// Manejo de errores
-		if(ServerCall.data.error){
-			if(ServerCall.data.error.errors.email){
-				toast.error(ServerCall.data.error.errors.email.properties.message, {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-					progress: undefined,
-				});
-			} else if(ServerCall.data.error.errors.password){
-				toast.error(ServerCall.data.error.errors.password.properties.message, {
-					position: "top-right",
-					autoClose: 5000,
-					hideProgressBar: false,
-					closeOnClick: true,
-					pauseOnHover: true,
-					draggable: true,
-					progress: undefined,
-				});
+		const alertConfig = {
+			position: 'top-right',
+			autoClose: 5000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		}
+		if(ServerCall.error){
+			if(ServerCall.error.errors.email){
+				toast.error(ServerCall.error.errors.email.properties.message, alertConfig);
+			} else if(ServerCall.error.errors.password){
+				toast.error(ServerCall.error.errors.password.properties.message, alertConfig);
 			}
 		}
 	}
 
 	return(
 		<div className="container">
-			<div className="d-flex justify-content-center h-100">
+			<div className="d-flex mt-5 justify-content-center h-100">
 
-				<div className="card">
+				<div className="card card-form">
 
 					<div className="card-header">
 						<h3>Sign Up</h3>

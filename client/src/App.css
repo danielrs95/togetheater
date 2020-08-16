@@ -1,12 +1,10 @@
 .App {
   text-align: center;
 }
-
 html, body, #root, .container{
   height: 100%;
   background-color: white ;
 }
-
 /***** Dashboard component *****/
   .dashboardTitle{
     color: #588da8;
@@ -17,7 +15,6 @@ html, body, #root, .container{
     margin: 0 0 10px 10px;
     padding: 0 0 0 2px;
   }
-
 /***** topRated component *****/
   .container-fluid{
     position: relative;
@@ -59,7 +56,7 @@ html, body, #root, .container{
     transform: translate(-50%, -50%);
   }
   /* Al hacer hover cambiar el color del fondo del container */
-  .posterContainer:hover  {  
+  .posterContainer:hover  {
     background: rgb(0,0,0,0.8);
   }
   /* Al hacer hover cambiar la opacidad de la imagen */
@@ -118,7 +115,6 @@ html, body, #root, .container{
         margin-right:auto;
       }
     }
-
 /***** Navbar component *****/
   /* Navbar icon (titulo moviesApp) */
   .navbar-light .navbar-brand{
@@ -128,21 +124,26 @@ html, body, #root, .container{
   /* Navbar borde inferior y color de fondo*/
   .color-nav{
     border-bottom: 1px solid rgba(0,0,0,.5);
-    background-color: white; 
+    background-color: white;
   }
   /* Boton para hacer logout */
   .btn-danger {
     background-color: #cf1b1b;
   }
-
 /***** Form form *****/
+  .card a {
+    color: white;
+  }
   .card-form{
     margin: auto;
     width: 100%;
-    background-color: white  ; 
+    background-color: #00838f  ;
+  }
+  .card-header{
+    background-color: #00838f;
   }
   .card-header h3{
-    color: #073642;
+    color: white;
   }
   .card-body button{
     background-color: #073642;
@@ -151,15 +152,40 @@ html, body, #root, .container{
   /* Cambiar el color de todos los iconos de FontAwesome */
   .fas{
     font-size: 20px;
-    color: #b58900 ;
+    color: #b58900;
   }
-
-
-
-
-
-
-
-
-
-
+  .fa-user, .fa-key{
+    font-size: 20px;
+    color: #073642 ;
+  }
+/***** Footer component *****/
+  .footerContainer{
+    margin: 30px 0 0 0;
+    height: 110px;
+    background-color: #00838f;
+    justify-content: center;
+  }
+  .iconContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 50%;
+  }
+  .fa-linkedin, .fa-github, .fa-envelope-square{
+    font-size: 50px;
+    color: #fff;
+    margin: 10px 0 0 10px
+  }
+  .footerBottom{
+    height: 30px;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  .footerText{
+    display: inline-block;
+    vertical-align: middle;
+  }

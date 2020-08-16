@@ -56,9 +56,9 @@ export default function Trending () {
 			progress: undefined,
 		}
 		if(ServerCall.error){
-			toast.error(ServerCall.msg,alertConfig)
+			toast.error(ServerCall.msg, alertConfig)
 		} else {
-			toast.success(ServerCall.msg,alertConfig)
+			toast.success(ServerCall.msg, alertConfig)
 		}
 	}
 
