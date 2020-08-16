@@ -2,10 +2,11 @@ import jwt_decode from "jwt-decode";
 export const SET_CURRENT_USER = "SET_CURRENT_USER";
 
 export const loginUser = (user,dispatch,seterror) =>{
-  fetch("http://localhost:5000/users/login", {
+  fetch("/api/users/login", {
     method: "POST",
     body: JSON.stringify(user),
-    headers: {
+    headers:
+    {
       Accept: "application/json",
       "Content-Type": "application/json"
     }
@@ -27,7 +28,6 @@ export const loginUser = (user,dispatch,seterror) =>{
     console.log("error")
     logoutUser(dispatch);
   });
-    console.log("hola")
 };
 
 export const setCurrentUser = decoded => {//si se loguea , setear datos del usuario

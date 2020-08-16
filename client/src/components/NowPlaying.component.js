@@ -25,7 +25,7 @@ export default function Trending () {
 
 	const addMovie = async(data) => {
 		let token=localStorage.getItem('jwt')
-		const ServerCall = await axios.post("http://localhost:5000/movies/add", {
+		const ServerCall = await axios.post("/api/movies/add", {
 			api_movie_id: data.id,
 			title: data.title,
 			user: context.stateUser.user.userId
@@ -34,7 +34,7 @@ export default function Trending () {
 				Authorization: token
 			}
 		})
-		// Alert message 
+		// Alert message
 		if(ServerCall.data.error){
 			toast.error(ServerCall.data.msg, {
 				position: "top-right",
@@ -63,14 +63,14 @@ export default function Trending () {
 			<div className="row no-gutters">
 				{movies.results.map((result,index)=>{
 					return(
-						<div 
+						<div
 							className="posterContainer col-sm-6 col-md-4 col-lg-2"
 							key={result.id}
 						>
 							<div className="poster">
-								<img 
-									className="posterImage" 
-									src={`https://image.tmdb.org/t/p/original${result.poster_path}`} 
+								<img
+									className="posterImage"
+									src={`https://image.tmdb.org/t/p/original${result.poster_path}`}
 									alt={result.title}/>
 								<div className="posterInfo">
 									<div className="posterText">
@@ -79,7 +79,7 @@ export default function Trending () {
 											<div className="addWishlist">
 												{context.stateUser.isAuthenticated === true ?
 													<span>
-														<i 
+														<i
 															className="fas fa-plus-square"
 															onClick={()=> {
 																addMovie(result)
@@ -111,9 +111,9 @@ export default function Trending () {
 								</div>
 							</div>
 						</div>
-					)			
-				})}	
-			</div>		
+					)
+				})}
+			</div>
 		</div>
 	)
 }
