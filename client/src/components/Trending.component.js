@@ -64,6 +64,9 @@ export default function Trending () {
 
 	return(
 		<div className='container-fluid mt-5 pt-1'>
+			<div>
+				<h1 className='componentTitle'>Trending movies</h1>
+			</div>
 			<div className='row no-gutters'>
 				{movies.results.map((result,index)=>{
 					return(

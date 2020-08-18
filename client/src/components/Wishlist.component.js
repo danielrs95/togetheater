@@ -5,7 +5,7 @@ import AuthGlobal from "../context/store/AuthGlobal";
 function Wishlist() {
 	const context = useContext(AuthGlobal);
 
-	const url = "http://localhost:5000/movies/"
+	const url = "/api/movies/"
 	let token=localStorage.getItem('jwt')
 
 	const config = {
@@ -19,11 +19,16 @@ function Wishlist() {
 
 	const listMovies = async(data) => {
 		const ServerCall = await axios.get(url, config)
-		console.log(ServerCall)
+		console.log(ServerCall.data)
 	}
 
 	return (
-		<h1 onClick={()=>{listMovies()}}>Wishlist</h1>
+		<div className='container mt-5'>
+			<div>
+				<h1 className='componentTitle'>Welcome to your wishlist movies</h1>
+			</div>
+			<h1 onClick={()=>{listMovies()}}>Wishlist</h1>
+		</div>
 	)
 }
 
@@ -41,7 +46,7 @@ export default Wishlist
 	// })
 	// .then(response => {
 	//   console.log(response)
-	// }) 
+	// })
 	// .catch(err => {
 	//   console.log(err);
 	// });
