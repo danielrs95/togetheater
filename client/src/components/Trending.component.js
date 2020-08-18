@@ -56,14 +56,17 @@ export default function Trending () {
 			progress: undefined,
 		}
 		if(ServerCall.error){
-			toast.error(ServerCall.msg,alertConfig)
+			toast.error(ServerCall.msg, alertConfig)
 		} else {
-			toast.success(ServerCall.msg,alertConfig)
+			toast.success(ServerCall.msg, alertConfig)
 		}
 	}
 
 	return(
 		<div className='container-fluid mt-5 pt-1'>
+			<div>
+				<h1 className='componentTitle'>Trending movies</h1>
+			</div>
 			<div className='row no-gutters'>
 				{movies.results.map((result,index)=>{
 					return(

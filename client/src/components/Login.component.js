@@ -31,7 +31,7 @@ export default function Login(props){
     };
 
     if (email === "" || password === "") {
-    	toast.error("Credenciales erroneas, intente de nuevo", {
+    	toast.error("Wrong credentials", {
     		position: "top-right",
     		autoClose: 5000,
     		hideProgressBar: false,
@@ -40,8 +40,6 @@ export default function Login(props){
     		draggable: true,
     		progress: undefined,
     	});
-      // seterror("Ingrese datos correctamente");
-      // console.log(error)
     } else {
       loginUser(user, context.dispatch, seterror);
     }
@@ -53,7 +51,7 @@ export default function Login(props){
   } else {
   	return(
   		<div className="container">
-	  		<div className="d-flex justify-content-center h-100">
+	  		<div className="d-flex mt-5 justify-content-center h-100">
 
 	  			{/* Card for login form */}
 	  			<div className="card card-form">

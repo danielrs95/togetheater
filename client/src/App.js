@@ -11,11 +11,12 @@ import Upcoming from './components/Upcoming.component.js';
 import Login from './components/Login.component.js';
 import Register from './components/Register.component.js';
 import Wishlist from './components/Wishlist.component.js';
+import Footer from './components/Footer.component.js';
 import Auth from './context/store/Auth'
 
 function App() {
   return (
-  	<Auth>	
+  	<Auth>
 	  	<BrowserRouter>
 		      <NavbarComponent />
 		      <br/>
@@ -26,11 +27,11 @@ function App() {
 		      	<Route path="/Popular" exact component={Popular} />
 		      	<Route path="/TopRated" exact component={TopRated} />
 		      	<Route path="/Upcoming" exact component={Upcoming} />
-
 		      	<Route path="/Wishlist" exact component={Wishlist} />
 		      	<Route path="/Login"  component={Login} />
 		      	<Route path="/Register"  component={Register} />
 		      </Switch>
+          <Footer/>
 	    </BrowserRouter>
     </Auth>
   );

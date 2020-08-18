@@ -11,24 +11,13 @@ toast.configure()
 export default function Trending () {
 	const context = useContext(AuthGlobal);
 
-	let [movies, setMovies] = useState({
-		results: []
-	})
-
-	useEffect(()=>{
-		const fetchData = async() => {
-			const result = await axios(`https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}`)
-			setMovies(result.data)
-		}
-		fetchData();
-	}, [])
-
 	const addMovie = async(data) => {
 		let token=localStorage.getItem('jwt')
 		const ServerCall = await axios.post("/api/movies/add", {
 			api_movie_id: data.id,
 			title: data.title,
-			user: context.stateUser.user.userId
+			poster_path: data.poster_path,
+			user: context.stateUser.user.userId,
 		}, {
 			headers: {
 				Authorization: token
@@ -60,8 +49,11 @@ export default function Trending () {
 
 	return(
 		<div className='container-fluid mt-5 pt-1'>
+			<div>
+				<h1 className='componentTitle'>Movies beeing played</h1>
+			</div>
 			<div className="row no-gutters">
-				{movies.results.map((result,index)=>{
+				{context.nowPlaying.map((result,index)=>{
 					return(
 						<div
 							className="posterContainer col-sm-6 col-md-4 col-lg-2"

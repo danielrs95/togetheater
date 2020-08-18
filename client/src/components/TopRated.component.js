@@ -60,6 +60,9 @@ export default function TopRated () {
 
 	return(
 		<div className='container-fluid mt-5 pt-1'>
+			<div>
+				<h1 className='componentTitle'>Top rated movies</h1>
+			</div>
 			<div className="row no-gutters">
 				{movies.results.map((result,index)=>{
 					return(
