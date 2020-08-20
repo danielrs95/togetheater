@@ -3,21 +3,20 @@
 }
 html, body, #root, .container{
   height: 100%;
-  background-color: white ;
+  background-color: #F0F7F4 ;
 }
 /***** Components titles ******/
-.componentTitle{
-  font-size: 50px;
-  color: #00838f;
-  text-align: center;
-  margin: 0;
-}
+  .componentTitle{
+    font-size: 50px;
+    color: #588DA8;
+    text-align: center;
+    margin: 0;
+  }
 /***** Dashboard component *****/
   .dashboardTitle{
     color: #588da8;
     border-bottom: 1px solid #383e56;
     font-size: 2rem;
-    font-weight: bold;
     display: block;
     margin: 0 0 10px 10px;
     padding: 0 0 0 2px;
@@ -77,7 +76,7 @@ html, body, #root, .container{
   }
   .posterText {
     /*background-color: #4CAF50;*/
-    color: white;
+    color: #F0F7F4;
     font-size: 13px;
     padding: 30px 20px 20px 20px;
   }
@@ -125,21 +124,20 @@ html, body, #root, .container{
 /***** Navbar component *****/
   /* Navbar icon (titulo moviesApp) */
   .navbar-light .navbar-brand{
-    color:  #588da8;
-    font-weight: bold;
+    color:  #2B2118;
   }
   /* Navbar borde inferior y color de fondo*/
   .color-nav{
     border-bottom: 1px solid rgba(0,0,0,.5);
-    background-color: white;
+    background-color: #F0F7F4;
   }
   /* Boton para hacer logout */
   .btn-danger {
-    background-color: #cf1b1b;
+    background-color: #D16014;
   }
 /***** Form form *****/
   .card a {
-    color: white;
+    color: #F0F7F4;
   }
   .card-form{
     margin: auto;
@@ -150,7 +148,7 @@ html, body, #root, .container{
     background-color: #00838f;
   }
   .card-header h3{
-    color: white;
+    color: #F0F7F4;
   }
   .card-body button{
     background-color: #073642;
@@ -159,7 +157,7 @@ html, body, #root, .container{
   /* Cambiar el color de todos los iconos de FontAwesome */
   .fas{
     font-size: 20px;
-    color: #b58900;
+    color: #0B132B;
   }
   .fa-user, .fa-key{
     font-size: 20px;
@@ -169,7 +167,7 @@ html, body, #root, .container{
   .footerContainer{
     margin: 30px 0 0 0;
     height: 110px;
-    background-color: #00838f;
+    background-color: #AF9164;
     justify-content: center;
   }
   .iconContainer{
@@ -180,7 +178,7 @@ html, body, #root, .container{
   }
   .fa-linkedin, .fa-github, .fa-envelope-square{
     font-size: 50px;
-    color: #fff;
+    color: #F0F7F4;
     margin: 10px 0 0 10px
   }
   .footerBottom{
@@ -195,4 +193,5 @@ html, body, #root, .container{
   .footerText{
     display: inline-block;
     vertical-align: middle;
+    color: #F0F7F4;
   }
