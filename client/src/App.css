@@ -141,11 +141,11 @@ html, body, #root, .container{
   }
   .card-form{
     margin: auto;
-    width: 100%;
-    background-color: #00838f  ;
+    width: 80%;
+    background-color: #AF9164  ;
   }
   .card-header{
-    background-color: #00838f;
+    background-color: #AF9164;
   }
   .card-header h3{
     color: #F0F7F4;
