@@ -18,6 +18,7 @@ router.post('/add', auth, async(req, res, next)=>{
 	const data = {
 		api_movie_id: req.body.api_movie_id,
 		title: req.body.title,
+		poster_path: req.body.poster_path,
 		user: req.body.user
 	}
 	try{
@@ -56,7 +57,7 @@ module.exports = router
 // })
 
 
-// Actualizar movie 
+// Actualizar movie
 // router.put('/update/:id', async(req, res, next)=>{
 // 	const movie = await Movie.findById(req.params.id)
 // 	movie.title = req.body.title

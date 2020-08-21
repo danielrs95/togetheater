@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const User = require('../models/user.model.js');
-const  auth  = require("../middlewares/auth");
+const auth  = require("../middlewares/auth");
 const jwt = require("jsonwebtoken")
 
 // Peticion a http://localhost:5000/users/ para ver todos los usuarios
@@ -55,7 +55,7 @@ router.post('/login', async(req, res, next)=>{
 // Ruta para ver si el token es valido, booleano para el frontend
 router.post('/tokenIsValid', async(req, rest, next)=>{
 	try{
-		
+
 	}catch(err){
 		res.status(500).json({err: err.message})
 	}
