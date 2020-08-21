@@ -55,8 +55,7 @@ export default function View (props) {
 					return(
 						<div
 							className="posterContainer col-sm-6 col-md-4 col-lg-2"
-							key={result.id}
-						>
+							key={result.id}>
 							<div className="poster">
 								<img
 									className="posterImage"

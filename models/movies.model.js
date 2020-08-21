@@ -8,10 +8,10 @@ const MovieSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
-  api_movie_id: {type: String, required: true}
+  api_movie_id: {type: String, required: true},
+  poster_path: {type:String, required:true}
 })
 
 const Movie = mongoose.model("Movie", MovieSchema);
-
 
 module.exports = Movie;
