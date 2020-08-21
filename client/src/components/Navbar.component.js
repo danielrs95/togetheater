@@ -15,7 +15,7 @@ export default function NavbarComponent(){
 
   return(
     <Navbar collapseOnSelect expand="lg" className='color-nav'  fixed="top">
-      <Navbar.Brand href="/"><h2>Togetheater</h2></Navbar.Brand>
+      <Navbar.Brand href="/"><h2>TOGETHEATER</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
